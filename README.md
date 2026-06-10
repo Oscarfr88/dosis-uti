@@ -19,6 +19,19 @@ abrila en el navegador del celular **conectado a la misma red WiFi** que
 la Mac (el servidor debe quedar corriendo en la Mac). La interfaz es
 responsive y está optimizada para pantallas táctiles.
 
+## 🌐 App publicada (la forma recomendada de compartir)
+
+**https://oscarfr88.github.io/dosis-uti/**
+
+Ese link funciona en cualquier dispositivo. Para dejarla instalada como app:
+- **iPhone**: abrir en Safari → botón Compartir → "Agregar a pantalla de inicio".
+- **Android**: abrir en Chrome → menú ⋮ → "Agregar a pantalla principal".
+
+Una vez abierta por primera vez, funciona **sin conexión** (service worker).
+Para publicar cambios: editar el código, regenerar `dist/` con `build.command`,
+subir el número de versión en `sw.js` (CACHE = 'infusiones-uti-vN') y hacer
+`git add -A && git commit && git push`.
+
 ## Compartir con otros médicos (archivo autónomo)
 
 `dist/InfusionesUTI.html` es la app completa en **un solo archivo** (~3,4 MB):
