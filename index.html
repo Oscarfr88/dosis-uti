@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#020617" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icons/icon-180.png" />
+  <link rel="icon" type="image/png" href="icons/icon-192.png" />
+  <title>Infusiones UTI — Calculadora de drogas</title>
+  <meta name="description" content="Calculadora bidireccional de dosis y ritmos de infusión continua para Terapia Intensiva, Anestesia y Urgencias." />
+
+  <!-- Librerías locales (carpeta vendor/) — la app funciona sin internet -->
+  <script src="vendor/react.production.min.js"></script>
+  <script src="vendor/react-dom.production.min.js"></script>
+  <script src="vendor/tailwind.js"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' };
+  </script>
+  <script src="vendor/babel.min.js"></script>
+
+  <style>
+    /* Tipografía del sistema, tabular para números críticos */
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+  <div id="root"></div>
+
+  <!-- Lógica pura y datos (JS plano) -->
+  <script src="src/utils/calculations.js"></script>
+  <script src="src/data/drugs.js"></script>
+
+  <!-- Componentes React (JSX transpilado en el navegador por Babel) -->
+  <script type="text/babel" src="src/components/Disclaimer.jsx"></script>
+  <script type="text/babel" src="src/components/PatientPanel.jsx"></script>
+  <script type="text/babel" src="src/components/CategoryTabs.jsx"></script>
+  <script type="text/babel" src="src/components/DrugCard.jsx"></script>
+  <script type="text/babel" src="src/App.jsx"></script>
+
+  <!-- Modo offline e instalación como app (solo tiene efecto publicada en
+       HTTPS o en localhost; abierta como archivo no hace nada). -->
+  <script>
+    if ('serviceWorker' in navigator &&
+        (location.protocol === 'https:' || location.hostname === 'localhost')) {
+      navigator.serviceWorker.register('sw.js').catch(function () {});
+    }
+  </script>
+</body>
+</html>
