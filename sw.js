@@ -5,7 +5,7 @@
 // correcciones de dosis llegan a todos en la visita siguiente.
 //
 // IMPORTANTE: subir el número de versión en cada publicación.
-const CACHE = 'infusiones-uti-v1';
+const CACHE = 'infusiones-uti-v2';
 
 const ASSETS = [
   './',

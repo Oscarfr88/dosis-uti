@@ -24,7 +24,7 @@
     {
       id: 'noradrenalina', categoria: 'vasopresores', nombre: 'Noradrenalina',
       unidad: 'mcg/kg/min',
-      concentracion: { amount: 4, unit: 'mg', volume: 100 },
+      concentracion: { amount: 8, unit: 'mg', volume: 100 },
       rango: { min: 0.01, max: 1 },
       presentacion: 'Amp. 4 mg / 4 ml',
       nota: 'Titular según TAM objetivo. Administrar por vía central.',
@@ -72,11 +72,11 @@
 
     // ----------------------- Sedantes -----------------------
     {
-      id: 'propofol', categoria: 'sedantes', nombre: 'Propofol 1%',
+      id: 'propofol', categoria: 'sedantes', nombre: 'Propofol 2%',
       unidad: 'mg/kg/h',
-      concentracion: { amount: 1000, unit: 'mg', volume: 100 },
+      concentracion: { amount: 2000, unit: 'mg', volume: 100 },
       rango: { min: 0.5, max: 4 },
-      presentacion: 'Fco. 1% (10 mg/ml) — sin diluir',
+      presentacion: 'Fco. 2% (20 mg/ml) — sin diluir',
       nota: 'Riesgo de PRIS con >4 mg/kg/h sostenido >48 h. Aporta 1,1 kcal/ml.',
     },
     {
@@ -100,7 +100,7 @@
     {
       id: 'fentanilo', categoria: 'analgesia', nombre: 'Fentanilo',
       unidad: 'mcg/kg/h',
-      concentracion: { amount: 1000, unit: 'mcg', volume: 100 },
+      concentracion: { amount: 750, unit: 'mcg', volume: 100 },
       rango: { min: 0.5, max: 3 },
       presentacion: 'Amp. 250 mcg / 5 ml',
       nota: 'Acumulación con infusiones prolongadas (lipofílico).',
@@ -108,7 +108,7 @@
     {
       id: 'remifentanilo', categoria: 'analgesia', nombre: 'Remifentanilo',
       unidad: 'mcg/kg/min',
-      concentracion: { amount: 5, unit: 'mg', volume: 100 },
+      concentracion: { amount: 10, unit: 'mg', volume: 100 },
       rango: { min: 0.025, max: 0.3 },
       presentacion: 'Vial 5 mg (polvo)',
       nota: 'Vida media ultracorta e independiente del tiempo de infusión. Prever analgesia de rescate al suspender.',
@@ -132,12 +132,12 @@
       nota: 'Asegurar sedación profunda concomitante. Libera histamina.',
     },
     {
-      id: 'cisatracurio', categoria: 'bnm', nombre: 'Cisatracurio',
-      unidad: 'mcg/kg/min',
-      concentracion: { amount: 100, unit: 'mg', volume: 100 },
-      rango: { min: 1, max: 3 },
-      presentacion: 'Amp. 10 mg / 5 ml',
-      nota: 'Asegurar sedación profunda. De elección en falla renal/hepática (vía de Hofmann).',
+      id: 'pancuronio', categoria: 'bnm', nombre: 'Pancuronio',
+      unidad: 'mg/kg/h',
+      concentracion: { amount: 50, unit: 'mg', volume: 50 },
+      rango: { min: 0.05, max: 0.1 },
+      presentacion: 'Amp. 4 mg / 2 ml',
+      nota: 'Asegurar sedación profunda. Larga duración; vagolítico (taquicardia). Acumulación importante en falla renal.',
     },
     {
       id: 'rocuronio', categoria: 'bnm', nombre: 'Rocuronio',
